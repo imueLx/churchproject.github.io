@@ -86,6 +86,25 @@ nav img{
     opacity:0.7;
     transition: 1s;
 }
+.watchlive-btn{
+    display:inline-block;
+    text-decoration:none;
+    border: 2px solid ivory;
+    margin: 15px 15px;
+    padding: 15px 54px;
+    border-radius: 2px 10px;
+    color: ivory;
+    font-size: 16px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.watchlive-btn:hover{
+    border: 1px solid rgb(218, 157, 96);
+    background:rgb(218, 157, 96);
+    opacity:0.7;
+    transition: 1s;
+}
 .loc-btn{
     display:inline-block;
     text-decoration:none;
@@ -134,8 +153,264 @@ nav .fa{
     .nav-links ul{
         padding: 30px;
     }
+}
+/*-----HOME----*/
+.home{
+    width:80%;
+    margin:auto;
+    text-align:center;
+    padding-top:80px;
+}
+h1{
+    font-size:36px;
+    font-weight:600;
+}
+p{
+    color: #000;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding:10px;
+}
+.row{
+    margin-top:5%;
+    display: flex;
+    justify-content: space-between;
+    }
+    .home{
+    width:80%;
+    margin:auto;
+    text-align:center;
+    padding-top:80px;
+}
+h1{
+    font-size:36px;
+    font-weight:600;
+}
+p{
+    color: #000;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding:10px;
+}
+.row{
+    margin-top:5%;
+    display: flex;
+    justify-content: space-between;
+    }
+.home-col{
+    flex-basis:31%;
+    background: rgba(240, 190, 133, 0.7);
+    border-radius:10px;
+    margin-bottom: 5%;
+    padding:20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+.home-col img{
+    width:100%
+}
+h3{
+    text-align: center;
+    font-weight: 500;
+    margin:10px 0;
+}
+.home-col:hover{
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 5px 5px 5px #888888;
+}
+@media(max-width:700px){
+    .row{
+        flex-direction: column;
+    }
+}
+/*-------feature----*/
+
+
+.featurevent{
+    width:80%;
+    margin:auto;
+    text-align:center;
+    padding-top:80px;
+}
+h1{ 
+    text-align: center;
+    font-size:36px;
+    font-weight:600;
+}
+p{
+    color: #000;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    padding:10px;
+    text-align: center;
+}
+.row{
+    margin-top:2%;
+    display: flex;
+    justify-content:space-around;
+    }
+.feature-col{
+    flex-basis:25%;
+    background: rgba(240, 190, 133, 0.7);
+    border-radius:20px;
+    margin-bottom: 5%;
+    padding:20px 12px;
+    transition: 0.5s;
+        }
+.feature-col img{
+    width:100%;
+    }
+.layer h3{
+    position: inherit;
+    text-align: center;
+    font-weight: 500;
+    margin:5px;
+    }
+.layer:hover{
+    border: 1px solid;
+    padding: 5px;
+    box-shadow: 5px 5px 5px 5px #99b3db;
+}
+@media(max-width:700px){
+    .row{
+        flex-direction: column;
+    }
+}
+
+/*-------Mission----*/
+.about{
+    margin: 100px auto;
+    width:100%;
+    border-radius:10px;
+    background-image: linear-gradient(rgba(85, 91, 122, 0.7), rgba(124, 131, 156, 0.7)),url(images/ContactImg.png);
+    background-position:center;
+    background-size:cover;
+    text-align:center;
+    
+    padding:100px 0;
+}
+.about p{
+color: ivory;
+font-size: 16px;
+}
+.about h1{
+    color: ivory;
+    font-size: 50px;
+}
+
+
+
+/*-------priest----*/
+
+   
+   .priest{
+       width:80%;
+       margin:auto;
+       padding-top:100px;
+       text-align:center;
+   }
+   .priest-col{
+   flex-basis: 44%;
+   border-radius:10px;
+   margin-bottom:5%;
+   text-align:center;
+   background:rgba(240, 190, 133, 0.7);
+   padding:25px;
+   cursor: pointer;
+   display: flex;
+   }
+   .priest-col img{
+       height:40px ;
+       margin-left:5px ;
+       margin-right:30px ;
+       border-radius: 50%;
+   }
+   .priest-col p{
+       padding: 0;
+   }
+   .priest-col h3{
+    margin-top: 15px;
+    text-align: left;       
+   }
+   @media(max-width:700px){
+    .priest-col img{
+        margin-left:0px ;
+        margin-right:15px ;
+    }
+}
+
+/*-------Contact----*/
+.Churchinfo{
+    
+    margin: 100px auto;
+    width:80%;
+    border-radius:10px;
+    background-image: linear-gradient(rgba(85, 91, 122, 0.7), rgba(124, 131, 156, 0.7)),url(images/ContactImg.png);
+    background-position:center;
+    background-size:cover;
+    text-align:center;
+    padding:100px 0;
+}
+ 
+.Churchinfo h1{
+    color:ivory;
+    margin-bottom: 40px;
+    padding:0;
+}
+@media(max-width:700px){
+    .Churchinfo h1{
+        font-size: 24px ;
+    }
+}
+
+/*------------ footer ---------*/
+.footer{
+    margin: 0 0;
+    background-color: black;
+    width:100%;
+    text-align:center;
+    padding:30px 0;
+    column-count: 4;
+    column-width: 250px;
+    
+}
+.footer h1{
+    text-align: center;
+    color: ivory;
+    margin-bottom: 20px;
+    margin-top:20px;
+    font-weight: 300;
+    font-size:25px;
+}
+
+.icon{
+    position: relative;
+    color: ivory;
+    background-size: 100% 100%;
+    margin: 0 10px;
+    cursor:pointer;
+    
+}
+.footer p{
+    color: ivory;
+    text-align: center;
+    font-size: 10px;
 
 }
+
+
+
+
+
+
+
+    
+        
+        
 
 
 
