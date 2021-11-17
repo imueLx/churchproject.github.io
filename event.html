@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+
+    <title>Good Shepherd Parish</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Quando&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+</head>
+<body>
+ <section class="sub-header">
+     <nav>
+          <a href="index.html"><img src="images/logoChurchf.png"></a>
+         <div class="nav-links" id="navLinks" >
+               <i class="fa fa-close" style="font-size:40px;color:rgb(218, 157, 96)"  onclick="hideMenu()"></i>
+                    <ul>
+                         <li> <a href="index.html">HOME</a></li>
+                         <li> <a href="about.html">ABOUT</a></li>
+                         <li> <a href="event.html">EVENT</a></li>
+                         <li> <a href="Give.html">GIVE</a></li>
+                         <li> <a href="contact.html">CONTACT</a></li>
+                    </ul>
+         </div>
+              <i class="fa fa-bars"  style="font-size:40px;color:rgb(218, 157, 96)" onclick="showMenu()"></i>
+     </nav>
+              <h1> CHURCH EVENTS</h1>
+</section>
+<!---------Featured Events------->
+                <section class="featuredevent">
+                                         <h1> Featured Events</h1>
+                                                  <p>Provide the needs of one another</p>
+                    <div class="row">
+                         <div class="feature-col">
+                                             <img src="images/Wedding (2).png"> 
+                                             <div class ="layer">
+                                                 <h3> Wedding</h3>
+                                             </div>
+                         </div>
+                                          <div class="feature-col">
+                                             <img src="images/Baptized (1).png">
+                                                 <div class="layer">
+                                                     <h3>Baptized</h3>
+                                                 </div>
+                                        </div>
+                                     <div class="feature-col">
+                                        <img src="images/Mass (1).png" >
+                                             <div class ="layer">
+                                                  <h3>Mass communion</h3>
+                                             </div>
+                                    </div>
+                    </div>
+               </div>
+          
+     </section>    
+     <section class="Inquiry">
+          <div class="inquiry-box">
+               <h3>INQUIRE</h3>
+               <form class="inquiry-form">
+                    <input type="text" placeholder="Enter Name"required>
+                    <input type="email" placeholder="Enter Email"required>
+                    <textarea rows="5" placeholder="Message" required></textarea>
+                    <button type="submit" class="join-btn color-btn">Submit Inquiry</button>
+               </form>
+          </div>
+          <div class="appointment-box">
+               <h3>APPOINTMENT</h3>
+               <form class="appointment-form">
+                    <input type="text" placeholder="Enter Name"required>
+                    <input type="email" placeholder="Enter Email"required>
+                    <textarea rows="5" placeholder="Message" required></textarea>
+                    <button type="submit" class="join-btn color-btn">Submit Appointment</button>
+               </form>
+          </div>
+     </section>
+     
+   <!----------- footer -------------->
+
+
+<section class="footer"> 
+     <h1>Hour Service <p>Monday-Saturday 9:00 AM - 5:00 PM<br>
+          Sunday Servive  8:00 AM - 12:00 PM </p>
+     </h1>
+     
+     <h1> Location
+          <p>Sanggumay Street, <br>Doña Manuela Subdivision,<br> Las Pinas, 1740 Metro Manila</p>
+      </h1>
+      <div class="icon">
+           <h1>Follow Us</h1>
+          <i class="fa fa-facebook"></i>
+          <i class="fa fa-twitter"></i>
+          <i class="fa fa-instagram"></i>
+          <i class="fa fa-youtube"></i>
+      </div> 
+</section>
+
+
+              <!------javascript----->
+       <script>
+               var navLinks = document.getElementById("navLinks");
+                     function showMenu(){
+                           navLinks.style.right ="0";
+                              }
+                     function hideMenu(){
+                           navLinks.style.right ="-200px";
+                             }
+      </script>
+
+ </section>
+</body> 
+
+</html>

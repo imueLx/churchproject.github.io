@@ -134,7 +134,7 @@ nav .fa{
         display:block;
     }
     .nav-links{
-     position:absolute;
+     position:fixed;
      background:rgb(141, 170, 187);
      height: 100vh;
      width: 200px;
@@ -235,7 +235,8 @@ h3{
     text-align:center;
     padding-top:80px;
 }
-h1{ 
+h1{
+    margin-top: 50px;
     text-align: center;
     font-size:36px;
     font-weight:600;
@@ -286,7 +287,7 @@ p{
     margin: 100px auto;
     width:100%;
     border-radius:10px;
-    background-image: linear-gradient(rgba(85, 91, 122, 0.7), rgba(124, 131, 156, 0.7)),url(images/ContactImg.png);
+    background-image: linear-gradient(rgba(85, 91, 122, 0.7), rgba(124, 131, 156, 0.7)),url(images/covermission.jpg);
     background-position:center;
     background-size:cover;
     text-align:center;
@@ -374,13 +375,13 @@ font-size: 16px;
     width:100%;
     text-align:center;
     padding:30px 0;
-    column-count: 4;
+    column-count: 3;
     column-width: 250px;
     
 }
 .footer h1{
     text-align: center;
-    color: ivory;
+    color: rgb(233, 155, 87);
     margin-bottom: 20px;
     margin-top:20px;
     font-weight: 300;
@@ -388,6 +389,7 @@ font-size: 16px;
 }
 
 .icon{
+    font-size: 30px;
     position: relative;
     color: ivory;
     background-size: 100% 100%;
@@ -398,11 +400,231 @@ font-size: 16px;
 .footer p{
     color: ivory;
     text-align: center;
-    font-size: 10px;
-
+    font-size: 18px;
 }
 
+/*----------about page-------------*/
 
+.sub-header{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(85, 91, 122, 0.7), rgba(124, 131, 156, 0.7)),url(images/backgroundAbout.jpg);
+    background-position:center;
+    background-size: cover;
+    text-align: center;
+    color: white;
+}
+
+.sub-header h1{
+    margin-top: 50px;
+}
+.about-us{
+    width:80%;
+    margin: auto;
+    padding-top:80px;
+    padding-bottom: 50px ;
+}
+
+.about-col{
+    flex-basis: 48%;
+    padding:30px 2px;
+}
+
+.about-col img{
+    width:100%;
+}
+.about-col h1{
+    text-align: left;
+    padding-top: 0;
+}
+.about-col p{
+    padding:15px 0 25px;
+}
+
+.color-btn{
+    border: 1px solid #000;
+    background:transparent;
+    color:rgb(19, 43, 40)
+}
+
+.about-us-mission{
+    margin: 100px auto;
+    width:100%;
+    border-radius:10px;
+    background-image: linear-gradient(rgba(85, 91, 122, 0.7), rgba(124, 131, 156, 0.7)),url(images/covermission.jpg);
+    background-position:center;
+    background-size:cover;
+    text-align:center;
+    padding:100px 0;
+}
+.about-us-mission p{
+color: ivory;
+font-size: 16px;
+}
+.about-us-mission h1{
+    color: ivory;
+    font-size: 50px;
+}
+.our-priest{
+    color: rgb(81, 156, 243);
+    font-size: 50px;
+    text-align:center;
+    padding:0;
+}
+.PriestInfo {
+    column-count: 4;
+    column-width: 250px;
+    flex-basis: 48%;
+    padding:30px 2px;
+}
+.PriestInfo img{
+    width: 100%;
+}
+.Cstaff{
+    color: rgb(81, 156, 243);
+    font-size: 50px;
+    text-align:center;
+    padding:0;
+}
+.Cstaff-col{
+    column-count: 4;
+    column-width: 250px;
+    flex-basis: 48%;
+    padding:30px 2px;
+}
+.Cstaff-col img{
+    width: 100%;
+}
+/*-----------event page----------*/
+.Inquiry{
+    padding:50px;
+    columns:  250px 2;
+}
+
+.inquiry-box div{
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+    justify-content:space-between;
+    padding:12px 12px;
+    width: 200px;
+    box-sizing: border-box;
+    color: rgb(109, 105, 105);
+}
+
+.inquiry-box{
+    border:2px solid #99b3db;
+    margin: 50px 0;
+    padding:20px 12px;
+    
+}
+.inquiry-box h3{
+    text-align: left;
+}
+.inquiry-form input, .inquiry-form textarea{
+    width: 100%;
+    padding:10px;
+    margin: 15px 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background-color: #f1eded;
+}
+.inquiry-form button{
+    margin:10px 0;
+}
+.appointment-box h3{
+    text-align: left;
+}
+.appointment-box div{
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+    justify-content:space-between;
+    padding:12px 12px;
+    width: 200px;
+    box-sizing: border-box;
+    color: rgb(109, 105, 105);
+}
+
+.appointment-box{
+    border:2px solid #99b3db;
+    margin: 50px 0;
+    padding:20px 12px;
+    display: inline-table;
+}
+
+.appointment-form input, .appointment-form textarea{
+    width: 100%;
+    padding:10px;
+    margin: 15px 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background-color: #f1eded;
+}
+.appointment-form button{
+    margin:10px 0;
+}
+@media(max-width:700px){
+    .sub-header h1{
+        font-size: 24px ;
+    }
+}
+
+/*---------- contact us page -----------*/
+
+.location-map{
+    width: 80%;
+    margin: auto;
+    padding: 80px 0;
+}
+
+.location-map iframe{
+    width: 100%;
+
+}
+.churchcontact{
+    width:80%;
+    margin: auto;
+}
+.churchcontact-col{
+    flex-basis: 48%;
+    margin-bottom: 30px;
+}
+.churchcontact-col div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+        
+}
+.churchcontact-col div .fa{
+    font-size: 28px;
+    color:rgb(58, 103, 139);
+    margin: 0px;
+    margin-right: 30px;
+}
+.churchcontact-col div p{
+    padding:5px;
+    
+
+
+}
+.churchcontact-col h5{
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: 400;
+
+}
+.churchcontact-col input, .churchcontact-col textarea{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 17px;
+    outline: none;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
 
 
 
