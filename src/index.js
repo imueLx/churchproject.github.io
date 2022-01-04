@@ -8,6 +8,12 @@ import {
   updateDoc
 } from 'firebase/firestore'
 
+import { 
+  getStorage, ref , 
+  uploadBytes, getDownloadURL, 
+  uploadBytesResumable } 
+from "firebase/storage"
+
 const firebaseConfig = {
     apiKey: "AIzaSyAsfmSSfnWzwq-aLjdnXO8IDmYA6fUShoU",
     authDomain: "npm-test-6e462.firebaseapp.com",
@@ -18,6 +24,7 @@ const firebaseConfig = {
   };
 
   initializeApp(firebaseConfig)
+  
 
   const db = getFirestore()
   
@@ -25,7 +32,7 @@ const firebaseConfig = {
   const colRef = collection(db, 'posts')
 
   //query
-  const q = query(colRef, orderBy('createdAt','asc'))
+  //const q = query(colRef, orderBy('createdAt','asc'))
 
   // Real time get data
   onSnapshot(colRef, (snapshot) => {
@@ -33,10 +40,9 @@ const firebaseConfig = {
     snapshot.docs.forEach((doc)=>{
       posts.push({ ...doc.data(), id: doc.id })
     })
-    console.log(posts)  
   })
 
-// adding docs
+// upload click
 const addPostForm = document.querySelector('.add')
 addPostForm.addEventListener('submit', (e) => {
   e.preventDefault()
@@ -45,15 +51,56 @@ addPostForm.addEventListener('submit', (e) => {
     var filename =  file.name
     var text = document.getElementById('comment').value 
 
+    var metadata = {
+      contentType: file.type
+  }
+  const storage = getStorage();
+  const storageRef = ref(storage, filename);
+  const uploadTask = uploadBytesResumable(storageRef, file, metadata);
+
+  uploadTask.on('state_changed', 
+                (snapshot) => {
+                    const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                    console.log('Upload is ' + progress + '% done');
+                    
+                    switch (snapshot.state) {
+                    case 'paused':
+                        console.log('Upload is paused');
+                        break;
+                    case 'running':
+                        console.log('Upload is running');
+                        break;
+                    }
+                }, 
+                (error) => {
+                    // Handle unsuccessful uploads
+                    console.log('Error uploading')
+                }, 
+                () => {
+                    getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {  
+                    console.log('File available at', downloadURL);
+                    
+                    
+                    });
+                }
+            );
+            
+        });//end of upload function
+
+
+// adding docs func
   addDoc(colRef, {
-    comment: text,
+    comments: text,
+    imgLink: text,
     createdAt: serverTimestamp()
   })
   .then(() => {
     addPostForm.reset()
     
   })
-})
+  alert("Upload Successful")
+  document.getElementById('display').src = downloadURL;
+  
 
 // deleting docs
 const deletePostForm = document.querySelector('.delete')
