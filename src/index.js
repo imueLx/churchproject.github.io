@@ -33,7 +33,7 @@ const firebaseConfig = {
     snapshot.docs.forEach((doc)=>{
       posts.push({ ...doc.data(), id: doc.id })
     })
-    console.log(posts)
+    console.log(posts)  
   })
 
 // adding docs
@@ -47,6 +47,7 @@ addPostForm.addEventListener('submit', (e) => {
   })
   .then(() => {
     addPostForm.reset()
+    
   })
 })
 
