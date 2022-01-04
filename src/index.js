@@ -41,8 +41,12 @@ const addPostForm = document.querySelector('.add')
 addPostForm.addEventListener('submit', (e) => {
   e.preventDefault()
 
+    var file = document.getElementById('input').files[0]
+    var filename =  file.name
+    var text = document.getElementById('comment').value 
+
   addDoc(colRef, {
-    comment: addPostForm.comment.value,
+    comment: text,
     createdAt: serverTimestamp()
   })
   .then(() => {
