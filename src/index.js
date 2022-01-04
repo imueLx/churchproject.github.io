@@ -35,12 +35,7 @@ const firebaseConfig = {
   //const q = query(colRef, orderBy('createdAt','asc'))
 
   // Real time get data
-  onSnapshot(colRef, (snapshot) => {
-    let posts = []
-    snapshot.docs.forEach((doc)=>{
-      posts.push({ ...doc.data(), id: doc.id })
-    })
-  })
+  
 
 // upload click
 const addPostForm = document.querySelector('.add')
@@ -79,7 +74,17 @@ addPostForm.addEventListener('submit', (e) => {
                 () => {
                     getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {  
                     console.log('File available at', downloadURL);
-                    
+                    addDoc(colRef, {
+                      comment: text,
+                      imgLink: text,
+                      createdAt: serverTimestamp()
+                    })
+                    .then(() => {
+                      addPostForm.reset()
+                      
+                    })
+                    alert("Upload Successful")
+                    document.getElementById('display').src = downloadURL;
                     
                     });
                 }
@@ -89,17 +94,7 @@ addPostForm.addEventListener('submit', (e) => {
 
 
 // adding docs func
-  addDoc(colRef, {
-    comments: text,
-    imgLink: text,
-    createdAt: serverTimestamp()
-  })
-  .then(() => {
-    addPostForm.reset()
-    
-  })
-  alert("Upload Successful")
-  document.getElementById('display').src = downloadURL;
+  
   
 
 // deleting docs

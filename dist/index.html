@@ -11,19 +11,19 @@
     <h2>Welcome to Admin Panel</h2>
 
     
-
+    <form class="add">
     <div class="input-group mb-3">
         <input type="file" id="input" class="form-control" accept="image/*">
         
     </div>
-    <form class="add">
-    <div class="form-floating">
-        <textarea class="form-control" placeholder="Leave a comment here" id="comment" style="height: 100px"></textarea>
-        <label for="comment"> Comments</label>
-        <button id="upload" class="btn btn-primary mt-1">Upload</button>
+    
+        <div class="form-floating">
+            <textarea class="form-control" placeholder="Leave a comment here" id="comment" style="height: 100px"></textarea>
+            <label for="comment"> Comment</label>
+            <button id="upload" class="btn btn-primary mt-1">Upload</button>
+            
         
-       
-      </div>
+        </div>
     </form>
 
 
@@ -32,16 +32,22 @@
         <input type="text" name="id" required>
 
         <button>Delete</button>
-    </form>
+    </form> 
 
     <form class="update">
         <label for="id">Document id:</label>
         <input type="text" name="id" required>
-        <input type="text" id="comment" placeholder="Comment"  required>
+        <input type="text" id="updated" placeholder="Comment"  required>
         <button>Update</button>
     </form>
 
     <button id="logout" class="btn btn-secondary mt-1">Logout</button>
+
+    <div class="text-center mt-1">
+        <img src="https://via.placeholder.com/500" class="img-thumbnail" id="display">
+
+    </div>
+
     <script src="bundle.js"></script>
 </body>
 </html>
